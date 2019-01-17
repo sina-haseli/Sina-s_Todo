@@ -6,7 +6,9 @@ class TodoListItem extends Component{
         super(props);
         this.onClickClose=this.onClickClose.bind(this);
         this.onClickDone=this.onClickDone.bind(this);
+
     }
+
     onClickClose(){
         let index=parseInt(this.props.index);
         this.props.removeItem(index);

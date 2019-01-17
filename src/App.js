@@ -37,10 +37,11 @@ class App extends Component {
       this.setState({todoItems:todoItems})
   }
   render() {
+      console.log('>>>', this.state,todoItems)
     return (
       <div className="App">
           <TodoHeader/>
-          <TodoList item={this.props.initItems} removeItem={this.removeItem} markTodoDone={this.markTodoDone} />
+          <TodoList items={this.state.todoItems} removeItem={this.removeItem} markTodoDone={this.markTodoDone} />
           <TodoForm addItem={this.addItem}/>
       </div>
     );
